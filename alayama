@@ -1,0 +1,22 @@
+
+[22,27,16,2,18,6] -- Insertion Sort'a göre sıralama yapalım. (n=dizideki girdi sayımız)
+İlk sıra için en küçük sayı aranır ve tüm girdiler sorgulanır.  (2) bulunur ve (22) ile yer değiştir. 
+(2,27,16,22,18,6) === n kadar sorgu ile ilk sıra tamamlandı.
+İkinci sıra için geri kalan girdiler sorgulanır ve en küçük sayı olan (6) bulunur. 27 ile yer değiştirir.
+(2,6,16,22,18,27) == (n-1) kadar sorgu ile ikinci sıra tamamlandı.
+Üçüncü sıra için geri kalan sayılar sorgulanır. (16) bulunur, konumu doğru olduğu için yer değiştirmez.
+(2,6,16,22,18,27) == (n-2) kadar sorgu ile üçüncü sıra tamamlandı.
+(n-3) sorgu ile 4. sıra için en küçük sayı geride kalan girdilerde aranır. (18) sayısı bulunur. 22 ile yer değiştirir. (2,6,16,18,22,27)
+(n-4) sorgu ile 5. sıra için en küçük sayı aranır, 22 sayısı bulunur ama konum olarak doğru yerdedir. 
+6. sıra için tek girdi kaldığı için tek 1 sorgu yapılır ve (27) bulunur. Konum olarak doğru yerdedir.
+Sıralamanın en son hali şu şekildedir. (2,6,16,18,22,27)
+Toplamda n+(n-1)+(n-2)+.....+1 kadar sorgu yapıldı. Bu da (n*(n+1))/2=(n²+n)/2 sorgu yapar.
+Big-O gösterimi = O(n²) olur.
+
+18 sayısı ortada olduğundan dolayı Average Case'dir.
+
+[7,3,5,8,2,9,4,15,6] dizisinin ilk dört adımı şu şekildedir.
+En küçük sayı olan 2 bulunur. 7 sayısı ile yer değiştirilerek ilk sıra tamamlanır. (2,3,5,8,7,9,4,15,6)
+İkinci sıra için geri kalanlarda en küçük sayı aranır ve 3 bulunur ancak doğru yerde olduğundan yer değişikliği olmaz. (2,3,5,8,7,9,4,15,6)
+Üçünvü sıra için geri kalanlarda en küçük sayı aranır ve 4 bulunur. 5 ile yer değiştirir. (2,3,4,8,7,9,5,15,6)
+Dördüncü sıra için geri kalanlarda en küçük sayı aranır ve 5 bulunur. 8 ile yer değiştirir. (2,3,4,5,7,9,8,15,6,)
